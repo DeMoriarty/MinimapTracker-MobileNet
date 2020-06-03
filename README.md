@@ -33,7 +33,7 @@ let's say we want to skip to 1:34, then
 starts_at = (minutes * 60 + seconds) * frame_rate = (60 * 1 + 34) * 30
 ```
 ### 6. optional: change "icon_radius"
-usually icon_radius should be set to 11, but if doesn't work, you can try other numbers under 20.  
+usually icon_radius should be set to 11, but if this doesn't work, you can try other values under 20.  
 ### 7. optional: set "show" to True if you want to see the tracking process
 ### 8. run the script
 ```
