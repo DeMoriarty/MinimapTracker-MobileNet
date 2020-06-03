@@ -3,21 +3,17 @@ import time
 from minimap_tracker import MinimapTracker
 from model import mobilenet_v3
 
-video_path = "videos/grf.mp4"
-#targets = ["Jayce","Rek'Sai","Lissandra","Ezreal","Karma", 
-#           "Ornn","Jarvan IV","Morgana","Lucian","Shen"]
-targets = ["jayce","reksai","liss","ez","karma", 
-           "ornn","j4","morg","lucian","shen"]
-starts_at = 97 * 30
-icon_radius=8
-show = True
+# load local video file
+video_path = "videos/lck.mp4"
+# load from youtube (pafy required)
+# video_path = util.load_yt('https://www.youtube.com/watch?v=LST3AF-bpIA').url
+save_path = "paths/lck.json"
 
-### You need to have youtube-dl and pafy library installed
-#video_path = util.load_yt('https://www.youtube.com/watch?v=LST3AF-bpIA').url
-#targets = ["Kennen","Jarvan IV","Sejuani","Ezreal", "Nautilus", 
-#           "Aatrox","Lee Sin","Taric","Miss Fortune","LeBlanc"]
-#starts_at = 83 * 30
-#icon_radius=11
+targets = ["kennen","j4","Sejuani","ez", "Nautilus", 
+           "Aatrox","Lee Sin","Taric","mf","LeBlanc"]
+starts_at = 83 * 30
+icon_radius=11
+show = True
 
 cap = cv2.VideoCapture(video_path)
 model = mobilenet_v3(version=3)
@@ -49,6 +45,6 @@ try:
 except Exception as E:
   print(E)
 finally:
-  tracker.save('paths/grf.json')
+  tracker.save(save_path)
   cap.release()
   cv2.destroyAllWindows()
