@@ -9,7 +9,7 @@ $ git clone https://github.com/DeMoriarty/MinimapTracker-MobileNet.git
 ### 2. edit run.py
 ### 3. change "video_path" to path of your video file
 ```python
-video_path = 'videos/gameplay.mp4'  
+video_path = "videos/lck.mp4"  
 ```
 it's also possible to load videos directly from youtube, but you need to have pafy library installed 
 ```
@@ -17,6 +17,10 @@ $ pip install pafy
 ```
 ```python
 video_path = util.load_yt("https://www.youtube.com/watch?v=LST3AF-bpIA").url  
+```
+### 4. change "save_path" to where you want to save the output JSON file
+```python
+save_path = "paths/lck.json"
 ```
 ### 4. change "targets" to the name/nickname of champions you want to track
 ```python
