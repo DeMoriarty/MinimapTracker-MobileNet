@@ -5,9 +5,6 @@ import os
 import json
 
 
-radius = 12
-map_size = 128
-device = 'cuda:0'
 with open('class_names.json','r') as f:
       classes = json.load(f)
 num_class = len(classes)
@@ -306,7 +303,7 @@ config0 = [
 ]
 
 '''mobilenet_tiny_1:
-99% accuracy on trainging set after 70k steps
+99% accuracy on training set after 70k steps
 94.3% accuracy with data augmentation and dropout
 32batch * 30iteration in 0.65sec CPU
 256batch * 30iteration in 4sec CPU
@@ -322,7 +319,7 @@ config1 = [
 ]
 
 '''mobilenet_tiny_2: (Fastest)
-99% accuracy on trainging set after 73k steps
+99% accuracy on training set after 73k steps
 95% accuracy with data augmentation and dropout
 32batch * 30iteration in 0.62sec CPU
 256batch * 30iteration in 3.2sec CPU
@@ -341,7 +338,7 @@ config2 = [
 ]
 
 '''mobilenet_tiny_3: (Best)
-_% accuracy on trainging set after _k steps
+_% accuracy on training set after _k steps
 _% accuracy with data augmentation and dropout
 32batch * 30iteration in 0.65sec CPU
 256batch * 30iteration in 3.9sec CPU
