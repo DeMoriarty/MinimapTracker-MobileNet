@@ -1,6 +1,10 @@
 # MinimapTracker-MobileNet
 This is a minimap tracker for League of Legends.
 
+## Dependency
+this code depends on OpenCV and PyTorch.
+please follow the instructions on official OpenCV and PyTorch website
+
 ## How to use it?
 ### 1. download the repository
 ```
