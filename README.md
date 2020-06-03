@@ -2,7 +2,7 @@
 This is a minimap tracker for League of Legends.
 
 ## How to use it?
-### 1. download the repository to your local computer
+### 1. download the repository
 ```
 $ git clone https://github.com/DeMoriarty/MinimapTracker-MobileNet.git
 ```
