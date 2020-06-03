@@ -10,7 +10,7 @@ class MinimapTracker:
     Parameters:
       targets:
           list of champion names
-          irregular names are also supported, such as: 'trynd', 'kha', 'tf'...
+          nicknames are also supported, such as: 'trynd', 'kha', 'tf'...
           
       model:
           pytorch model
@@ -20,7 +20,7 @@ class MinimapTracker:
           default: 11, if 11 doesn't work, try 12, 8
           
       map_image:
-          location of minimap image
+          path of minimap image
           default: 'minimap.png'
           
       map_pos:
@@ -46,7 +46,7 @@ class MinimapTracker:
       show:
           used for testing.
           if True, show the ongoing tracking process on seperate windows. there has to be a cv2.waitKey() in your main loop in order for this to work
-          setting this to False will boost the performance a little bit.
+          setting this to False will speed up the performance a little bit.
           default: False
     '''
     # Icon radius
