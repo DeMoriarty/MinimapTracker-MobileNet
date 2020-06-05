@@ -5,7 +5,7 @@ import json
 import torch
 
 class MinimapTracker:
-  def __init__(self, targets, model, icon_radius=11, *args, **kwargs):
+  def __init__(self, targets, model, icon_radius=11, device='auto', *args, **kwargs):
     '''
     Parameters:
       targets:
@@ -64,7 +64,10 @@ class MinimapTracker:
     self.paths = {i:{} for i in self.targets[:-1]}
 
     # Create classifier
-    self.model = model
+    assert device in ['cpu', 'cuda', 'cuda:0', 'auto']
+    if device == 'auto': device = 'cpu' if torch.cuda.is_available() else 'cuda:0'
+    self.device = device'
+    self.model = model.to(self.device)
     self.model.eval()
     
     # Load minimap Image
@@ -133,7 +136,7 @@ class MinimapTracker:
     if self.show:
       cv2.imshow('icons', np.concatenate([i[0] for i in self.icon_list[:10]], axis=1))
     batch = [torch.tensor(i[0][:,:,[2,1,0]]) for i in icon_list]
-    batch = torch.stack(batch)
+    batch = torch.stack(batch).to(self.device)
     batch = batch.transpose(3,2).transpose(2,1)
     probs = torch.softmax(self.model(batch), dim=-1)[:, self.class_indices]
     
