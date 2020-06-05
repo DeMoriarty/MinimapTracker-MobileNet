@@ -66,7 +66,7 @@ class MinimapTracker:
     # Create classifier
     assert device in ['cpu', 'cuda', 'cuda:0', 'auto']
     if device == 'auto': device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
-    self.device = device'
+    self.device = 'device'
     self.model = model.to(self.device)
     self.model.eval()
     
