@@ -7,7 +7,7 @@ this code depends on OpenCV and PyTorch.
 please follow the instructions on official OpenCV and PyTorch website
 
 ## Demo
-[<img src="https://img.youtube.com/vi/OQLFSO7heAM/maxresdefault.jpg" width="50%">](https://youtu.be/OQLFSO7heAM)
+[https://youtu.be/OQLFSO7heAM](https://youtu.be/OQLFSO7heAM)
 
 ## How to use it?
 ### 1. download the repository
