@@ -7,7 +7,7 @@ this code depends on OpenCV and PyTorch.
 please follow the instructions on official OpenCV and PyTorch website
 
 ## Demo
-[https://youtu.be/OQLFSO7heAM](https://youtu.be/m8-pJEsfJOM)
+[https://youtu.be/m8-pJEsfJOM](https://youtu.be/m8-pJEsfJOM)
 
 ## How to use it?
 ### 1. download the repository
